@@ -5,22 +5,22 @@ const features = [
   {
     icon: <Cloud className="h-8 w-8 text-primary" />,
     title: "Deploy Anywhere",
-    description: "Run on AWS Lambda, Azure, Cloudflare Workers, or Fly.io. You own the infrastructure."
+    description: "Run on AWS Lambda, Render.com, Fly.io, Railway, or any cloud platform. Your infrastructure, your sovereignty, zero vendor lock-in."
   },
   {
     icon: <Zap className="h-8 w-8 text-primary" />,
     title: "Free Tier Friendly",
-    description: "Optimized for lightweight deployment. Run your payments stack on free tiers of major providers."
+    description: "Lightweight by design. Deploy complete Bitcoin payment infrastructure on provider free tiers. Freedom shouldn't cost a fortune."
   },
   {
     icon: <Server className="h-8 w-8 text-secondary" />,
     title: "Full Sovereignty",
-    description: "No middlemen. No custodians. You hold the keys and run the code. Truly unstoppable."
+    description: "You hold the keys. You run the code. No third party can freeze, censor, or access your funds. True freedom to transact."
   },
   {
     icon: <GlobeLock className="h-8 w-8 text-primary" />,
-    title: "Easy Integration",
-    description: "Plug into WooCommerce, Shopify, or custom apps with standard APIs in minutes."
+    title: "Treasury Automation",
+    description: "Design custom payment flows, automated rebalancing, and multi-signature coordination. Everyone can build their own financial system."
   }
 ];
 

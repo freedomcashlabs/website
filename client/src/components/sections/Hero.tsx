@@ -29,15 +29,15 @@ export function Hero() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600">TRANSACT</span>.
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Accept and send Bitcoin payments anywhere. 
-            <span className="text-white font-medium"> No KYC, no custodians, </span>
-            just self custody.
+            Deploy self-custodial Bitcoin payment infrastructure in minutes. Run eCash mints, BTCPayServer, and Lightning nodes on
+            <span className="text-white font-medium"> AWS Lambda, Render, Fly.io. </span>
+            Your keys, your code, your freedom.
           </motion.p>
 
           <motion.div 
@@ -48,7 +48,7 @@ export function Hero() {
           >
             <Button size="lg" className="bg-primary text-black hover:bg-primary/90 font-mono h-14 px-8 text-base">
               <Terminal className="mr-2 h-5 w-5" />
-              Start with freedom.cash
+              Deploy Your Stack
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-mono h-14 px-8 text-base">
               Read the Manifesto <ArrowRight className="ml-2 h-5 w-5" />
@@ -60,11 +60,11 @@ export function Hero() {
       {/* Decorative Code Elements */}
       <div className="absolute right-0 bottom-20 hidden lg:block opacity-20 font-mono text-xs text-primary pointer-events-none select-none">
         <pre className="whitespace-pre">
-{`> INITIALIZING ENCLAVE...
-> VERIFYING SIGNATURES...
-> ESTABLISHING SECURE CHANNEL...
-> STATUS: CONNECTED [100%]
-> PRIVACY_MODE: ACTIVE`}
+{`> deploying to fly.io...
+> ✓ nutshell mint: LIVE
+> ✓ lightning node: SYNCED
+> ✓ treasury automation: ACTIVE
+> STATUS: SOVEREIGN`}
         </pre>
       </div>
     </section>

@@ -4,18 +4,18 @@ import networkImg from "@assets/images/minimal_network_nodes_for_how-it-works_se
 const steps = [
   {
     id: "01",
-    title: "Select App",
-    desc: "eCash mint, BTCPay Server",
+    title: "Choose Your Tools",
+    desc: "Select from eCash mints (Nutshell), lightweight BTCPayServer deployments, custom Lightning nodes, or combine multiple services. Pre-configured, production-ready.",
   },
   {
     id: "02",
-    title: "Configure",
-    desc: "Set up APIs, payment links, etc.",
+    title: "Deploy in Minutes",
+    desc: "One-click deployment to Fly.io, Render, AWS Lambda, or your preferred platform. Environment setup automated. SSL handled. Live in under 5 minutes.",
   },
   {
     id: "03",
-    title: "Get Paid",
-    desc: "Your wallet, inaccessible to anyone else, always running.",
+    title: "Transact Freely",
+    desc: "Generate payment APIs, integrate with your apps, configure automated treasury management. You're now your own Bitcoin payment provider. No permission required.",
   },
 ];
 

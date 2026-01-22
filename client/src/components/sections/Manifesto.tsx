@@ -7,45 +7,45 @@ export function Manifesto() {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="space-y-2 font-mono font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.9]">
-            <motion.div 
+            <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
             >
-              MONEY IS SPEECH.
+              FREEDOM TO TRANSACT
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               className="text-zinc-500"
             >
-              PRIVACY IS NOT A CRIME.
+              IS NON-NEGOTIABLE.
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              FREEDOM TO TRANSACT
+              MONEY IS SPEECH.
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               className="text-zinc-500"
             >
-              IS NON-NEGOTIABLE.
+              SELF-CUSTODY SHOULDN'T REQUIRE PERMISSION OR EXPERTISE.
             </motion.div>
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-lg md:text-xl leading-relaxed font-medium">
               <p>
-                We build parallel systems, not permissioned platforms. freedom.cash is built for individuals and businesses who refuse surveillance finance, want permissionless payments, and understand Bitcoin as freedom tech.
+                We build tools that make self-custodial Bitcoin payments trivially simple. Freedom to transact means anyone can deploy their own eCash mint, run their own BTCPayServer, operate their own Lightning infrastructure—all on free tier cloud services. Bitcoin is freedom tech. freedom.cash makes that freedom accessible to everyone.
               </p>
             </div>
             <div className="flex items-end justify-start md:justify-end">
