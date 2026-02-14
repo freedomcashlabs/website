@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Terminal } from "lucide-react";
-import heroBg from "@assets/images/dark_abstract_cypherpunk_mesh_background_for_hero_section.png";
+import heroBg from "@assets/images/dark_abstract_cypherpunk_mesh_background_for_hero_section.webp";
 
 export function Hero() {
   return (
@@ -35,9 +35,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Deploy self-custodial Bitcoin payment infrastructure in minutes. Run eCash mints, BTCPayServer, and Lightning nodes on
-            <span className="text-white font-medium"> AWS Lambda, Render, Fly.io. </span>
-            Your keys, your code, your freedom.
+            Deploy nodeless Bitcoin payment APIs powered by Breez SDK in minutes. Lightning and Liquid Network support with
+            <span className="text-white font-medium"> automated treasury management. </span>
+            Deploy to AWS Lambda, Render, Fly.io. Your keys, your rules, your freedom.
           </motion.p>
 
           <motion.div 
@@ -61,8 +61,9 @@ export function Hero() {
       <div className="absolute right-0 bottom-20 hidden lg:block opacity-20 font-mono text-xs text-primary pointer-events-none select-none">
         <pre className="whitespace-pre">
 {`> deploying to fly.io...
-> ✓ nutshell mint: LIVE
-> ✓ lightning node: SYNCED
+> ✓ breez sdk: INITIALIZED
+> ✓ liquid network: CONNECTED
+> ✓ spark backend: SYNCED
 > ✓ treasury automation: ACTIVE
 > STATUS: SOVEREIGN`}
         </pre>

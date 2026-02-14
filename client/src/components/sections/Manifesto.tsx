@@ -12,7 +12,7 @@ export function Manifesto() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
             >
-              FREEDOM TO TRANSACT
+              MONEY IS SPEECH.
             </motion.div>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
@@ -21,7 +21,7 @@ export function Manifesto() {
               transition={{ delay: 0.1 }}
               className="text-zinc-500"
             >
-              IS NON-NEGOTIABLE.
+              PRIVACY IS NOT A CRIME.
             </motion.div>
             <motion.div
               initial={{ x: -50, opacity: 0 }}
@@ -29,7 +29,7 @@ export function Manifesto() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              MONEY IS SPEECH.
+              FREEDOM TO TRANSACT
             </motion.div>
             <motion.div
               initial={{ x: 50, opacity: 0 }}
@@ -38,14 +38,14 @@ export function Manifesto() {
               transition={{ delay: 0.3 }}
               className="text-zinc-500"
             >
-              SELF-CUSTODY SHOULDN'T REQUIRE PERMISSION OR EXPERTISE.
+              IS NON-NEGOTIABLE.
             </motion.div>
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-lg md:text-xl leading-relaxed font-medium">
               <p>
-                We build tools that make self-custodial Bitcoin payments trivially simple. Freedom to transact means anyone can deploy their own eCash mint, run their own BTCPayServer, operate their own Lightning infrastructure—all on free tier cloud services. Bitcoin is freedom tech. freedom.cash makes that freedom accessible to everyone.
+                We build parallel systems, not permissioned platforms. freedom.cash is built for individuals and businesses who refuse surveillance finance, want permissionless payments, and understand Bitcoin as freedom tech.
               </p>
             </div>
             <div className="flex items-end justify-start md:justify-end">

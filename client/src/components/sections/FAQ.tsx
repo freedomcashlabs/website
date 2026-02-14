@@ -13,9 +13,9 @@ export function FAQ() {
         
         <Accordion type="single" collapsible className="w-full space-y-4">
           <AccordionItem value="item-1" className="border border-white/10 px-4 bg-white/5 rounded-sm">
-            <AccordionTrigger className="text-white hover:text-primary font-mono">Do I need technical expertise to deploy this?</AccordionTrigger>
+            <AccordionTrigger className="text-white hover:text-primary font-mono">Do I need to run my own Lightning node?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
-              No. Our deployment templates handle infrastructure setup, SSL certificates, environment configuration, and monitoring. If you can deploy a website, you can deploy your own Bitcoin payment infrastructure.
+              No. We use Breez SDK's nodeless architecture. You get full Lightning and Liquid Network functionality without managing nodes, channels, or liquidity. Deploy and go.
             </AccordionContent>
           </AccordionItem>
 
@@ -43,11 +43,18 @@ export function FAQ() {
           <AccordionItem value="item-5" className="border border-white/10 px-4 bg-white/5 rounded-sm">
             <AccordionTrigger className="text-white hover:text-primary font-mono">What Bitcoin technologies are supported?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
-              On-chain Bitcoin, Lightning Network, and Cashu eCash protocols. We focus on proven, battle-tested tech with strong privacy properties and self-custodial architecture.
+              Lightning Network and Liquid Network via Breez SDK. We support both Liquid and Spark backends. Automated treasury routing to onchain Bitcoin wallets included.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-6" className="border border-white/10 px-4 bg-white/5 rounded-sm">
+            <AccordionTrigger className="text-white hover:text-primary font-mono">How does automated treasury management work?</AccordionTrigger>
+            <AccordionContent className="text-muted-foreground">
+              Configure rules to automatically route incoming payments to your onchain Bitcoin wallet, different Lightning wallets, or split between multiple destinations. Set it once and payments flow automatically according to your rules.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-7" className="border border-white/10 px-4 bg-white/5 rounded-sm">
             <AccordionTrigger className="text-white hover:text-primary font-mono">Why build this as open source?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               Freedom to transact requires freedom to verify, audit, and trust. Open source ensures no one controls the tools of financial sovereignty. Your freedom shouldn't depend on our permission.

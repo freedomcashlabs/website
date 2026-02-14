@@ -9,8 +9,8 @@ const features = [
   },
   {
     icon: <Zap className="h-8 w-8 text-primary" />,
-    title: "Free Tier Friendly",
-    description: "Lightweight by design. Deploy complete Bitcoin payment infrastructure on provider free tiers. Freedom shouldn't cost a fortune."
+    title: "Nodeless & Lightweight",
+    description: "Powered by Breez SDK. No node management required. Lightning and Liquid Network support built-in. Deploy on free tiers."
   },
   {
     icon: <Server className="h-8 w-8 text-secondary" />,
@@ -19,8 +19,8 @@ const features = [
   },
   {
     icon: <GlobeLock className="h-8 w-8 text-primary" />,
-    title: "Treasury Automation",
-    description: "Design custom payment flows, automated rebalancing, and multi-signature coordination. Everyone can build their own financial system."
+    title: "Automated Treasury",
+    description: "Automatically route payments to your onchain Bitcoin wallet or different Lightning wallets. Set it once, let it run."
   }
 ];
 

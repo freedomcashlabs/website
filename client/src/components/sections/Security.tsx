@@ -1,10 +1,44 @@
 import { Cloud, Zap, Server } from "lucide-react";
 import { motion } from "framer-motion";
-import enclaveImg from "@assets/images/abstract_secure_enclave_visualization_for_security_section.png";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import enclaveImg from "@assets/images/abstract_secure_enclave_visualization_for_security_section.webp";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Form, FormField, FormItem, FormControl, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import { subscriberSchema, type SubscriberInput } from "@shared/subscriber";
 
 export function Security() {
+  const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
+  const form = useForm<SubscriberInput>({
+    resolver: zodResolver(subscriberSchema),
+    defaultValues: { contact: "" },
+  });
+
+  async function onSubmit(values: SubscriberInput) {
+    setLoading(true);
+    try {
+      await apiRequest("POST", "/api/subscribers", values);
+      toast({ title: "You're on the list!", description: "We'll notify you when it's ready." });
+      form.reset();
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "";
+      let description = "Something went wrong. Please try again.";
+      try {
+        const jsonStr = msg.substring(msg.indexOf(":") + 1).trim();
+        const parsed = JSON.parse(jsonStr);
+        if (parsed.message) description = parsed.message;
+      } catch {}
+      toast({ title: "Oops", description, variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <section id="security" className="py-32 bg-black relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -19,8 +53,9 @@ export function Security() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-20"></div>
               <img 
-                src={enclaveImg} 
-                alt="Secure Enclave" 
+                src={enclaveImg}
+                alt="Secure Enclave"
+                loading="lazy"
                 className="relative rounded-lg border border-white/10 w-full shadow-2xl hover:grayscale-0 transition-all duration-500"
               />
               <div className="absolute bottom-4 left-4 bg-black/90 border border-white/20 p-2 rounded text-[10px] font-mono text-primary animate-pulse">
@@ -80,14 +115,35 @@ export function Security() {
             <div className="p-6 border border-white/10 bg-white/5 rounded-lg">
                <h4 className="text-white font-bold font-mono mb-2">Confidential Compute (Coming Soon)</h4>
                <p className="text-muted-foreground text-xs mb-4">
-                 Interested in managed secure enclaves instead? Join the waitlist.
+                 Join the waitlist with your email or Nostr npub.
                </p>
-              <div className="flex gap-2">
-                <Input placeholder="Enter your email" className="bg-black border-white/20 text-white font-mono" />
-                <Button className="bg-secondary text-black hover:bg-secondary/90 font-mono">
-                  Notify Me
-                </Button>
-              </div>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="flex gap-2 items-start">
+                  <FormField
+                    control={form.control}
+                    name="contact"
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormControl>
+                          <Input
+                            placeholder="Email or npub1..."
+                            className="bg-black border-white/20 text-white font-mono"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    className="bg-secondary text-black hover:bg-secondary/90 font-mono"
+                  >
+                    {loading ? "..." : "Notify Me"}
+                  </Button>
+                </form>
+              </Form>
             </div>
 
           </div>

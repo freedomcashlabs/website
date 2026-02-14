@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import networkImg from "@assets/images/minimal_network_nodes_for_how-it-works_section.png";
+import networkImg from "@assets/images/minimal_network_nodes_for_how-it-works_section.webp";
 
 const steps = [
   {
     id: "01",
-    title: "Choose Your Tools",
-    desc: "Select from eCash mints (Nutshell), lightweight BTCPayServer deployments, custom Lightning nodes, or combine multiple services. Pre-configured, production-ready.",
+    title: "Configure Your API",
+    desc: "Set up your Breez SDK-powered payment infrastructure. Choose Lightning, Liquid Network, or both. Configure your treasury automation rules.",
   },
   {
     id: "02",
     title: "Deploy in Minutes",
-    desc: "One-click deployment to Fly.io, Render, AWS Lambda, or your preferred platform. Environment setup automated. SSL handled. Live in under 5 minutes.",
+    desc: "One-click deployment to Fly.io, Render, AWS Lambda, or your preferred platform. Breez SDK initialization automated. SSL handled. Live in under 5 minutes.",
   },
   {
     id: "03",
-    title: "Transact Freely",
-    desc: "Generate payment APIs, integrate with your apps, configure automated treasury management. You're now your own Bitcoin payment provider. No permission required.",
+    title: "Automate & Transact",
+    desc: "Payments automatically route to your onchain wallet or Lightning destinations. Generate payment links, integrate APIs with your apps. You're your own payment provider. No permission required.",
   },
 ];
 
@@ -66,6 +66,7 @@ export function HowItWorks() {
               viewport={{ once: true }}
               src={networkImg}
               alt="Network Diagram"
+              loading="lazy"
               className="w-full rounded-lg border border-white/10 opacity-80"
             />
           </div>

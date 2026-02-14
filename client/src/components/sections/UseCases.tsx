@@ -4,22 +4,22 @@ const cases = [
   {
     icon: <ShoppingCart className="w-6 h-6" />,
     title: "Merchants & Businesses",
-    desc: "Accept Bitcoin payments without intermediaries. Deploy your own BTCPayServer to WooCommerce, Shopify, or custom checkouts. Zero transaction fees. Complete sovereignty. Freedom to transact on your terms."
+    desc: "Accept Lightning and Liquid payments without intermediaries. Deploy your own payment API to WooCommerce, Shopify, or custom checkouts. Automated treasury routes funds to your wallets. Freedom to transact on your terms."
   },
   {
     icon: <Code2 className="w-6 h-6" />,
     title: "Developers & Builders",
-    desc: "Launch Lightning nodes, eCash mints, or payment APIs in minutes. Build censorship-resistant apps with self-custodial infrastructure. REST APIs, webhooks, real-time updates included. Freedom to build."
+    desc: "Deploy Breez SDK-powered payment APIs in minutes. Build censorship-resistant apps with nodeless infrastructure. REST APIs, webhooks, Lightning and Liquid support included. Freedom to build."
   },
   {
     icon: <Users className="w-6 h-6" />,
     title: "Communities & Projects",
-    desc: "Operate community treasuries with automated management. Deploy private eCash mints for your members. Multi-signature coordination without custodians. Freedom to organize."
+    desc: "Operate community payment infrastructure with automated treasury management. Route incoming payments to multiple destinations automatically. Self-custodial coordination without intermediaries. Freedom to organize."
   },
   {
     icon: <CloudLightning className="w-6 h-6" />,
     title: "Anyone Seeking Sovereignty",
-    desc: "Be your own bank. Deploy personal payment infrastructure, receive Lightning payments anywhere, automate your treasury. Freedom to transact is for everyone, not just institutions."
+    desc: "Be your own bank. Deploy personal payment infrastructure powered by Breez SDK, receive Lightning and Liquid payments, automate your treasury routing. Freedom to transact is for everyone."
   }
 ];
 

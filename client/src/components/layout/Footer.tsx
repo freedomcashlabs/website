@@ -20,7 +20,6 @@ export function Footer() {
               <li><a href="#" className="hover:text-primary transition-colors">Features</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Integration</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">API Docs</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
             </ul>
           </div>
 
@@ -29,8 +28,6 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors">Manifesto</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Status</a></li>
             </ul>
           </div>
 
