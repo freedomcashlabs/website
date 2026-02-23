@@ -3,32 +3,34 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: <Cloud className="h-8 w-8 text-primary" />,
+    icon: <Cloud className="w-6 h-6" />,
     title: "Deploy Anywhere",
     description: "Run on AWS Lambda, Render.com, Fly.io, Railway, or any cloud platform. Your infrastructure, your sovereignty, zero vendor lock-in."
   },
   {
-    icon: <Zap className="h-8 w-8 text-primary" />,
+    icon: <Zap className="w-6 h-6" />,
     title: "Nodeless & Lightweight",
-    description: "Powered by Breez SDK. No node management required. Lightning and Liquid Network support built-in. Deploy on free tiers."
+    description: "Powered by Breez SDK. No node management required. Instant Bitcoin payments built-in. Deploy on free tiers."
   },
   {
-    icon: <Server className="h-8 w-8 text-secondary" />,
+    icon: <Server className="w-6 h-6" />,
     title: "Full Sovereignty",
     description: "You hold the keys. You run the code. No third party can freeze, censor, or access your funds. True freedom to transact."
   },
   {
-    icon: <GlobeLock className="h-8 w-8 text-primary" />,
+    icon: <GlobeLock className="w-6 h-6" />,
     title: "Automated Treasury",
-    description: "Automatically route payments to your onchain Bitcoin wallet or different Lightning wallets. Set it once, let it run."
+    description: "Automatically route payments to your onchain Bitcoin wallet or other wallets. Set it once, let it run."
   }
 ];
 
 export function KeyValues() {
   return (
-    <section id="features" className="py-24 bg-black relative overflow-hidden">
+    <section id="features" className="py-24 bg-black">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h2 className="text-2xl font-mono text-white mb-12 opacity-50">/ CORE_CAPABILITIES</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -36,18 +38,15 @@ export function KeyValues() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group p-6 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors hover:border-primary/50 relative"
+              className="group"
             >
-              <div className="mb-6 p-3 bg-black/50 w-fit border border-white/10 group-hover:border-primary/30 transition-colors">
+              <div className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center rounded mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-all">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-mono font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
+              <h3 className="text-lg font-bold text-white mb-3 font-mono">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {feature.description}
               </p>
-              
-              {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-white/20 group-hover:border-primary transition-colors" />
             </motion.div>
           ))}
         </div>

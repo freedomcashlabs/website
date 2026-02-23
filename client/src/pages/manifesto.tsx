@@ -105,7 +105,7 @@ export default function ManifestoPage() {
                     Traditional payment rails were not built for velocity. They were built for control. Three-day settlement windows. Batch processing. Intermediaries extracting rent at every hop. Each delay is friction, and friction slows circulation, and slow circulation means less economic activity for everyone involved.
                   </p>
                   <p>
-                    Lightning settles in seconds. Liquid settles in minutes. No batch windows. No three-day holds while some bank earns float on your money. When payments clear instantly, a merchant restocks the same afternoon instead of waiting on receivables. Capital goes where it is needed instead of sitting in settlement queues.
+                    Bitcoin payments settle in seconds. No batch windows. No three-day holds while some bank earns float on your money. When payments clear instantly, a merchant restocks the same afternoon instead of waiting on receivables. Capital goes where it is needed instead of sitting in settlement queues.
                   </p>
                   <p>
                     Reduce the friction on every transaction and you increase the total throughput of the whole system. Freelancers stop bridging gaps with credit cards. Communities circulate value internally instead of leaking fees to distant intermediaries. The compounding effect of faster settlement is hard to overstate.
@@ -134,7 +134,7 @@ export default function ManifestoPage() {
                     Reform means asking permission from the people who benefit from the current arrangement. It means lobbying regulators who rotate through the same banks they regulate. It means waiting for incumbents to voluntarily give up their advantages. History suggests this takes forever, if it happens at all.
                   </p>
                   <p>
-                    Parallel systems skip that step. They do not ask for permission because they do not need it. Bitcoin does not require anyone's approval to exist. Lightning does not need a bank to route a payment. These are facts, not aspirations.
+                    Parallel systems skip that step. They do not ask for permission because they do not need it. Bitcoin does not require anyone's approval to exist. It does not need a bank to route a payment. These are facts, not aspirations.
                   </p>
                   <p>
                     freedom.cash makes this practical. You deploy your own payment infrastructure, hold your own keys, set your own treasury rules. The code is open source and the deployment is self-hosted. The only person who can shut it down is you. No platform to get kicked off of. No terms of service that change on a whim.
@@ -160,10 +160,10 @@ export default function ManifestoPage() {
                     Control your keys and nobody can freeze your account. Run your own infrastructure and nobody can deplatform you. There is no gap between you and your money for someone else to occupy.
                   </p>
                   <p>
-                    This used to require serious technical knowledge. Running a Lightning node meant managing channels, monitoring liquidity, handling backups, staying online. Most people and most businesses could not justify that overhead. So they used custodians, and custodians became the new banks, and the cycle repeated.
+                    This used to require serious technical knowledge. Running your own payment node meant managing channels, monitoring liquidity, handling backups, staying online. Most people and most businesses could not justify that overhead. So they used custodians, and custodians became the new banks, and the cycle repeated.
                   </p>
                   <p>
-                    Breez SDK changed the equation. Nodeless operation means you get Lightning and Liquid capability without the infrastructure burden. freedom.cash takes it further: deploy a complete payment stack to a cloud provider's free tier, configure your treasury routing, and walk away. Self-custody without the ops work. Sovereignty without the overhead.
+                    Breez SDK changed the equation. Nodeless operation means you get instant Bitcoin payment capability without the infrastructure burden. freedom.cash takes it further: deploy a complete payment stack to a cloud provider's free tier, configure your treasury routing, and walk away. Self-custody without the ops work. Sovereignty without the overhead.
                   </p>
                 </div>
               </motion.div>

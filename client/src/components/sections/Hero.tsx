@@ -36,7 +36,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Deploy nodeless Bitcoin payment APIs powered by Breez SDK in minutes. Lightning and Liquid Network support with
+            Deploy nodeless Bitcoin payment APIs powered by Breez SDK in minutes. Instant payments with
             <span className="text-white font-medium"> automated treasury management. </span>
             Deploy to AWS Lambda, Render, Fly.io. Your keys, your rules, your freedom.
           </motion.p>
@@ -65,8 +65,8 @@ export function Hero() {
         <pre className="whitespace-pre">
 {`> deploying to fly.io...
 > ✓ breez sdk: INITIALIZED
-> ✓ liquid network: CONNECTED
-> ✓ spark backend: SYNCED
+> ✓ bitcoin payments: ENABLED
+> ✓ instant settlement: ACTIVE
 > ✓ treasury automation: ACTIVE
 > STATUS: SOVEREIGN`}
         </pre>

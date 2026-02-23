@@ -4,12 +4,12 @@ const cases = [
   {
     icon: <ShoppingCart className="w-6 h-6" />,
     title: "Merchants & Businesses",
-    desc: "Accept Lightning and Liquid payments without intermediaries. Deploy your own payment API to WooCommerce, Shopify, or custom checkouts. Automated treasury routes funds to your wallets. Freedom to transact on your terms."
+    desc: "Accept Bitcoin payments without intermediaries. Deploy your own payment API to WooCommerce, Shopify, or custom checkouts. Automated treasury routes funds to your wallets. Freedom to transact on your terms."
   },
   {
     icon: <Code2 className="w-6 h-6" />,
     title: "Developers & Builders",
-    desc: "Deploy Breez SDK-powered payment APIs in minutes. Build censorship-resistant apps with nodeless infrastructure. REST APIs, webhooks, Lightning and Liquid support included. Freedom to build."
+    desc: "Deploy Breez SDK-powered payment APIs in minutes. Build censorship-resistant apps with nodeless infrastructure. REST APIs, webhooks, instant Bitcoin payments included. Freedom to build."
   },
   {
     icon: <Users className="w-6 h-6" />,
@@ -19,7 +19,7 @@ const cases = [
   {
     icon: <CloudLightning className="w-6 h-6" />,
     title: "Anyone Seeking Sovereignty",
-    desc: "Be your own bank. Deploy personal payment infrastructure powered by Breez SDK, receive Lightning and Liquid payments, automate your treasury routing. Freedom to transact is for everyone."
+    desc: "Be your own bank. Deploy personal payment infrastructure powered by Breez SDK, receive Bitcoin payments, automate your treasury routing. Freedom to transact is for everyone."
   }
 ];
 
