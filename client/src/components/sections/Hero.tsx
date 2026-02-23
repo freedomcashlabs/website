@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Terminal } from "lucide-react";
+import { Link } from "wouter";
 import heroBg from "@assets/images/dark_abstract_cypherpunk_mesh_background_for_hero_section.webp";
 
 export function Hero() {
@@ -50,9 +51,11 @@ export function Hero() {
               <Terminal className="mr-2 h-5 w-5" />
               Deploy Your Stack
             </Button>
-            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-mono h-14 px-8 text-base">
-              Read the Manifesto <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/manifesto">
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-mono h-14 px-8 text-base cursor-pointer">
+                Read the Manifesto <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

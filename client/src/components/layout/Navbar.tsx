@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +19,6 @@ export function Navbar() {
           <a href="#how-it-works" className="text-sm font-mono text-muted-foreground hover:text-white transition-colors">How it Works</a>
           <a href="#manifesto" className="text-sm font-mono text-muted-foreground hover:text-white transition-colors">Manifesto</a>
           <a href="#security" className="text-sm font-mono text-muted-foreground hover:text-white transition-colors">Security</a>
-          <Button variant="outline" className="font-mono text-primary border-primary/50 hover:bg-primary/10 hover:text-primary">
-            Get Early Access
-          </Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -38,9 +34,6 @@ export function Navbar() {
           <a href="#how-it-works" className="text-sm font-mono text-muted-foreground hover:text-white" onClick={() => setIsOpen(false)}>How it Works</a>
           <a href="#manifesto" className="text-sm font-mono text-muted-foreground hover:text-white" onClick={() => setIsOpen(false)}>Manifesto</a>
           <a href="#security" className="text-sm font-mono text-muted-foreground hover:text-white" onClick={() => setIsOpen(false)}>Security</a>
-          <Button className="w-full font-mono bg-primary text-black hover:bg-primary/90">
-            Get Early Access
-          </Button>
         </div>
       )}
     </nav>

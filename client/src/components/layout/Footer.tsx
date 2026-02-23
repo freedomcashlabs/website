@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <h4 className="font-mono text-white mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Manifesto</a></li>
+              <li><Link href="/manifesto" className="hover:text-primary transition-colors cursor-pointer">Manifesto</Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
             </ul>
           </div>
