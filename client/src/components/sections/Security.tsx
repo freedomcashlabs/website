@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormField, FormItem, FormControl, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+import { addSubscriber } from "@/lib/supabase";
 import { subscriberSchema, type SubscriberInput } from "@shared/subscriber";
 
 export function Security() {
@@ -22,18 +22,17 @@ export function Security() {
   async function onSubmit(values: SubscriberInput) {
     setLoading(true);
     try {
-      await apiRequest("POST", "/api/subscribers", values);
+      const { contact } = values;
+      const contact_type = contact.startsWith("npub1") ? "npub" : "email";
+      const result = await addSubscriber(contact, contact_type);
+      if (result === "duplicate") {
+        toast({ title: "Oops", description: "Already on the list", variant: "destructive" });
+        return;
+      }
       toast({ title: "You're on the list!", description: "We'll notify you when it's ready." });
       form.reset();
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : "";
-      let description = "Something went wrong. Please try again.";
-      try {
-        const jsonStr = msg.substring(msg.indexOf(":") + 1).trim();
-        const parsed = JSON.parse(jsonStr);
-        if (parsed.message) description = parsed.message;
-      } catch {}
-      toast({ title: "Oops", description, variant: "destructive" });
+    } catch {
+      toast({ title: "Oops", description: "Something went wrong. Please try again.", variant: "destructive" });
     } finally {
       setLoading(false);
     }

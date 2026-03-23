@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -14,7 +23,7 @@
     />
     <meta
       property="og:description"
-      content="Deploy self-custodial Bitcoin payment APIs powered by Breez SDK. Lightning and Liquid Network support with automated treasury management. Deploy to AWS Lambda, Render, Fly.io on free tiers."
+      content="Deploy self-custodial Bitcoin payment APIs powered by Breez SDK. Instant payments with automated treasury management. Deploy to AWS Lambda, Render, Fly.io on free tiers."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/attached_assets/social-preview.png" />
@@ -25,7 +34,7 @@
     />
     <meta
       name="twitter:description"
-      content="Deploy self-custodial Bitcoin payment APIs powered by Breez SDK. Lightning and Liquid Network support with automated treasury management. Deploy to AWS Lambda, Render, Fly.io on free tiers."
+      content="Deploy self-custodial Bitcoin payment APIs powered by Breez SDK. Instant payments with automated treasury management. Deploy to AWS Lambda, Render, Fly.io on free tiers."
     />
     <meta name="twitter:image" content="/attached_assets/social-preview.png" />
 
