@@ -1,22 +1,18 @@
-import { createClient } from "@supabase/supabase-js";
+import { submitLead } from "@leads/supabase-backend";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const supabaseUrl = import.meta.env.VITE_LEADS_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_LEADS_SUPABASE_ANON_KEY;
 
 export async function addSubscriber(
   contactValue: string,
   contactType: string,
 ): Promise<"ok" | "duplicate"> {
-  const { error } = await supabase.from("leads").insert({
-    site_id: "freedom-cash",
-    contact_type: contactType,
-    contact_value: contactValue.trim(),
-    metadata: {},
+  const result = await submitLead(supabaseUrl, supabaseAnonKey, {
+    siteId: "freedom-cash",
+    contactType,
+    contactValue,
   });
-
-  if (error?.code === "23505") return "duplicate";
-  if (error) throw new Error(error.message);
+  if (result.status === "duplicate") return "duplicate";
+  if (result.status === "error") throw new Error(result.message);
   return "ok";
 }
