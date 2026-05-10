@@ -8,6 +8,13 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+env:
+  SITE_URL: https://freedom.cash/
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,10 +31,8 @@ jobs:
       - name: Build
         run: npx vite build
         env:
-          VITE_APPWRITE_ENDPOINT: ${{ secrets.VITE_APPWRITE_ENDPOINT }}
-          VITE_APPWRITE_PROJECT_ID: ${{ secrets.VITE_APPWRITE_PROJECT_ID }}
-          VITE_APPWRITE_DATABASE_ID: ${{ secrets.VITE_APPWRITE_DATABASE_ID }}
-          VITE_APPWRITE_COLLECTION_ID: ${{ secrets.VITE_APPWRITE_COLLECTION_ID }}
+          VITE_LEADS_SUPABASE_URL: ${{ secrets.VITE_LEADS_SUPABASE_URL }}
+          VITE_LEADS_SUPABASE_ANON_KEY: ${{ secrets.VITE_LEADS_SUPABASE_ANON_KEY }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
@@ -35,3 +40,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/public
           cname: freedom.cash
+
+      - name: Verify deployed site
+        run: |
+          curl --fail --location --retry 12 --retry-delay 10 --retry-all-errors "$SITE_URL" \
+            | grep -F "freedom.cash | Freedom to Transact"
