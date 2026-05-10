@@ -6,7 +6,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: github-pages
@@ -16,7 +18,7 @@ env:
   SITE_URL: https://freedom.cash/
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,12 +36,21 @@ jobs:
           VITE_LEADS_SUPABASE_URL: ${{ secrets.VITE_LEADS_SUPABASE_URL }}
           VITE_LEADS_SUPABASE_ANON_KEY: ${{ secrets.VITE_LEADS_SUPABASE_ANON_KEY }}
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public
-          cname: freedom.cash
+          path: ./dist/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Verify deployed site
         run: |
