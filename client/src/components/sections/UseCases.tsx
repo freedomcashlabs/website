@@ -4,22 +4,22 @@ const cases = [
   {
     icon: <ShoppingCart className="w-6 h-6" />,
     title: "Merchants & Businesses",
-    desc: "Accept Bitcoin payments without intermediaries. Deploy your own payment API to WooCommerce, Shopify, or custom checkouts. Automated treasury routes funds to your wallets. Freedom to transact on your terms."
+    desc: "Deploy Freedom Pay and accept Bitcoin without intermediaries. Generate hosted checkout pages, integrate with your existing stack via REST API. Treasury automation routes funds directly to your wallets."
   },
   {
     icon: <Code2 className="w-6 h-6" />,
     title: "Developers & Builders",
-    desc: "Deploy Breez SDK-powered payment APIs in minutes. Build censorship-resistant apps with nodeless infrastructure. REST APIs, webhooks, instant Bitcoin payments included. Freedom to build."
+    desc: "Freedom Pay gives you a clean REST API, webhooks, and hosted checkout pages out of the box. Build Bitcoin-native apps without managing Lightning nodes or running complex payment infrastructure."
   },
   {
     icon: <Users className="w-6 h-6" />,
     title: "Communities & Projects",
-    desc: "Operate community payment infrastructure with automated treasury management. Route incoming payments to multiple destinations automatically. Self-custodial coordination without intermediaries. Freedom to organize."
+    desc: "Create a donation page in seconds. Route contributions to multiple wallets automatically. Freedom Pay handles the infrastructure — you focus on your community."
   },
   {
     icon: <CloudLightning className="w-6 h-6" />,
     title: "Anyone Seeking Sovereignty",
-    desc: "Be your own bank. Deploy personal payment infrastructure powered by Breez SDK, receive Bitcoin payments, automate your treasury routing. Freedom to transact is for everyone."
+    desc: "Be your own payment provider. Freedom Pay runs in your environment, you hold the keys, and no one can freeze your funds. Powered by Breez SDK — nodeless, lightweight, sovereign."
   }
 ];
 

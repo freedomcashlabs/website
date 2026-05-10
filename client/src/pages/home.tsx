@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { KeyValues } from "@/components/sections/KeyValues";
+import { FreedomPay } from "@/components/sections/FreedomPay";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Manifesto } from "@/components/sections/Manifesto";
 import { UseCases } from "@/components/sections/UseCases";
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <KeyValues />
+        <FreedomPay />
         <HowItWorks />
         <Manifesto />
         <UseCases />

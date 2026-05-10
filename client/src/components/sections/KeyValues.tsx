@@ -5,22 +5,22 @@ const features = [
   {
     icon: <Cloud className="w-6 h-6" />,
     title: "Deploy Anywhere",
-    description: "Run on AWS Lambda, Render.com, Fly.io, Railway, or any cloud platform. Your infrastructure, your sovereignty, zero vendor lock-in."
+    description: "Run Freedom Pay on AWS Lambda, Render.com, Fly.io, Railway, or any cloud platform. Zero vendor lock-in. Start free, scale as you grow."
   },
   {
     icon: <Zap className="w-6 h-6" />,
     title: "Nodeless & Lightweight",
-    description: "Powered by Breez SDK. No node management required. Instant Bitcoin payments built-in. Deploy on free tiers."
+    description: "Freedom Pay is powered by Breez SDK. No Lightning node, no channel management, no liquidity headaches. Instant Bitcoin payments, zero ops overhead."
   },
   {
     icon: <Server className="w-6 h-6" />,
     title: "Full Sovereignty",
-    description: "You hold the keys. You run the code. No third party can freeze, censor, or access your funds. True freedom to transact."
+    description: "You hold the keys. Freedom Pay runs in your environment. No third party can freeze, censor, or access your funds. Your infrastructure, your rules."
   },
   {
     icon: <GlobeLock className="w-6 h-6" />,
-    title: "Automated Treasury",
-    description: "Automatically route payments to your onchain Bitcoin wallet or other wallets. Set it once, let it run."
+    title: "Simple to Integrate",
+    description: "REST API, hosted checkout pages, donation pages, and webhooks out of the box. Simple to integrate, simple to deploy, simple to run."
   }
 ];
 

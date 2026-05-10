@@ -66,11 +66,11 @@ export function Security() {
           <div className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
               DEPLOY YOUR <br/>
-              <span className="text-muted-foreground">PAYMENTS STACK.</span>
+              <span className="text-muted-foreground">FREEDOM PAY.</span>
             </h2>
 
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              Make Bitcoin payments trivial. Deploy BTCPay or Nutshell to AWS, Azure, Cloudflare, or Render.
+              Make Bitcoin payments trivial. Deploy Freedom Pay to AWS, Render, Fly.io, or any platform in minutes.
             </p>
 
             <div className="space-y-8 mb-10">
@@ -112,9 +112,9 @@ export function Security() {
             </div>
 
             <div className="p-6 border border-white/10 bg-white/5 rounded-lg">
-               <h4 className="text-white font-bold font-mono mb-2">Confidential Compute (Coming Soon)</h4>
+               <h4 className="text-white font-bold font-mono mb-2">Hosted Freedom Pay (Coming Soon)</h4>
                <p className="text-muted-foreground text-xs mb-4">
-                 Join the waitlist with your email or Nostr npub.
+                 Fully managed Freedom Pay on confidential compute infrastructure. Join the waitlist with your email or Nostr npub.
                </p>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex gap-2 items-start">

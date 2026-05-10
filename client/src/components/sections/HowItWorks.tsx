@@ -4,18 +4,18 @@ import networkImg from "@assets/images/minimal_network_nodes_for_how-it-works_se
 const steps = [
   {
     id: "01",
-    title: "Configure Your API",
-    desc: "Set up your Breez SDK-powered payment infrastructure. Choose Lightning, Liquid Network, or both. Configure your treasury automation rules.",
+    title: "Deploy Freedom Pay",
+    desc: "One command to deploy Freedom Pay to Fly.io, Render, AWS Lambda, or your preferred platform. Breez SDK initialized automatically. SSL handled. Live in under 5 minutes.",
   },
   {
     id: "02",
-    title: "Deploy in Minutes",
-    desc: "One-click deployment to Fly.io, Render, AWS Lambda, or your preferred platform. Breez SDK initialization automated. SSL handled. Live in under 5 minutes.",
+    title: "Create Payment Links",
+    desc: "Use the REST API to generate hosted checkout pages and donation pages in seconds. Share the link. Accept Bitcoin payments immediately — no frontend code needed.",
   },
   {
     id: "03",
-    title: "Automate & Transact",
-    desc: "Payments automatically route to your onchain wallet or Lightning destinations. Generate payment links, integrate APIs with your apps. You're your own payment provider. No permission required.",
+    title: "Receive & Route Automatically",
+    desc: "Webhooks notify your app on every payment event. Treasury automation routes funds to your onchain wallet or splits across destinations. You're your own payment provider.",
   },
 ];
 

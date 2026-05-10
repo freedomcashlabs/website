@@ -36,9 +36,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Deploy nodeless Bitcoin payment APIs powered by Breez SDK in minutes. Instant payments with
-            <span className="text-white font-medium"> automated treasury management. </span>
-            Deploy to AWS Lambda, Render, Fly.io. Your keys, your rules, your freedom.
+            <span className="text-white font-medium">Freedom Pay</span> makes Bitcoin payments simple and lightweight. Powered by Breez SDK —
+            <span className="text-white font-medium"> checkout pages, donation pages, webhooks, treasury automation. </span>
+            Deploy to AWS Lambda, Render, Fly.io in minutes.
           </motion.p>
 
           <motion.div 
@@ -49,7 +49,7 @@ export function Hero() {
           >
             <Button size="lg" className="bg-primary text-black hover:bg-primary/90 font-mono h-14 px-8 text-base">
               <Terminal className="mr-2 h-5 w-5" />
-              Deploy Your Stack
+              Deploy Freedom Pay
             </Button>
             <Link href="/manifesto">
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-mono h-14 px-8 text-base cursor-pointer">
@@ -63,10 +63,10 @@ export function Hero() {
       {/* Decorative Code Elements */}
       <div className="absolute right-0 bottom-20 hidden lg:block opacity-20 font-mono text-xs text-primary pointer-events-none select-none">
         <pre className="whitespace-pre">
-{`> deploying to fly.io...
+{`> deploying freedom pay...
 > ✓ breez sdk: INITIALIZED
-> ✓ bitcoin payments: ENABLED
-> ✓ instant settlement: ACTIVE
+> ✓ checkout pages: READY
+> ✓ webhooks: CONFIGURED
 > ✓ treasury automation: ACTIVE
 > STATUS: SOVEREIGN`}
         </pre>
