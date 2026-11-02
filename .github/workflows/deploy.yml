@@ -32,9 +32,6 @@ jobs:
 
       - name: Build
         run: npx vite build
-        env:
-          VITE_LEADS_SUPABASE_URL: ${{ secrets.VITE_LEADS_SUPABASE_URL }}
-          VITE_LEADS_SUPABASE_ANON_KEY: ${{ secrets.VITE_LEADS_SUPABASE_ANON_KEY }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

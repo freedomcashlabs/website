@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormField, FormItem, FormControl, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { addSubscriber } from "@/lib/supabase";
+import { addSubscriber } from "@/lib/leads";
 import { subscriberSchema, type SubscriberInput } from "@shared/subscriber";
 
 export function Security() {
